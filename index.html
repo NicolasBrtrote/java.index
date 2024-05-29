@@ -5,15 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Cartela de Bingo</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         table {
             border-collapse: collapse;
             margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         td {
-            border: 1px solid black;
+            border: 1px solid #ddd;
             width: 50px;
             height: 50px;
             text-align: center;
+            font-size: 20px;
+            background-color: #fff;
+        }
+
+        @media only screen and (max-width: 600px) {
+            td {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -21,7 +60,7 @@
     <h1>Gerador de Cartela de Bingo</h1>
     <button onclick="gerarCartela()">Gerar Nova Cartela</button>
     <table id="cartela">
-        <!-- A cartela será gerada aqui -->
+        
     </table>
 
     <script>
@@ -48,7 +87,7 @@
             }
         }
 
-        gerarCartela(); // Gera uma cartela ao carregar a página
+        gerarCartela(); 
     </script>
 </body>
 </html>
